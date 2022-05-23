@@ -1,0 +1,46 @@
+/*#region SECTION CLIENTS*/
+
+.section {
+    @extend %section;
+}
+
+.container {
+    @extend %container;
+}
+
+.title {
+    @extend %title;
+}
+
+.client-list {
+    @extend %list;
+    @include centeredFlex(flex);
+}
+
+.client {
+    --items: 6;
+    @extend %grid-item;
+    
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    
+    &__link {
+        display: block;
+        border: 1px solid var(--icon-cl);
+        border-radius: 4px;
+        padding: 16px 32px;
+        fill: var(--icon-cl);
+
+        transition:
+        fill var(--transition-duration) var(--transition-timing-function),
+        border var(--transition-duration) var(--transition-timing-function);
+    }
+    
+    &__link:hover, &__link:focus {
+        border: 1px solid var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
+
+/*#endregion*/
