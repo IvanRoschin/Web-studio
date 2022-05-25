@@ -16,24 +16,24 @@
 
 .feature {
    @extend %list;
-   @extend %grid;
+//    @extend %grid;
     
-    &__item {
-      --items: 4;
-      @extend %grid-item;
-    }
+//     &__item {
+//       --items: 4;
+//       @extend %grid-item;
+//     }
     
-    &__item:nth-child(4n) {
-        margin-right: 0;
-    }
+//     &__item:nth-child(4n) {
+//         margin-right: 0;
+//     }
 
-    &__item-group {
-        @include centeredFlex(flex);
+//     &__item-group {
+//         @include centeredFlex(flex);
 
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: var(--third-background-color);
-    }
+//         height: 120px;
+//         margin-bottom: 30px;
+//         background-color: var(--third-background-color);
+//     }
 
     &__item-subtitle {
         color: var(--title-text-color);

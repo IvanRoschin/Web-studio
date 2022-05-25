@@ -1,14 +1,9 @@
 /*#region Placeholders*/
-%container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 %section {
-    padding: 94px 0px 94px 0px;
+    // padding: 94px 0px 94px 0px;
+
+    padding: 60px 0px 60px 0px;
 }
 
 %list {
@@ -38,7 +33,10 @@
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 0;
+
 }
 
 %btn {
