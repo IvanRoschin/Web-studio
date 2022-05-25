@@ -18,7 +18,10 @@
 }
 
 .client {
-    --items: 6;
+    --items: 2;
+    @media screen and (min-width: 768px) {
+        --items: 3;
+        }     
     @extend %grid-item;
     
     &:not(:last-child) {
