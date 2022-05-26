@@ -34,13 +34,13 @@
     }
 }
 
+
 .page-header__logo {
     // margin-right: 93px; 1200
     margin-right: 276px;
-    
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px)  {
         margin-right: 88px;
-    }
+    }    
 
 }
 
