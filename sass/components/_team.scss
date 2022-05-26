@@ -27,18 +27,19 @@
 
     --items: 1;
 
-    @media screen and (min-width: 768px) {
-        --items: 2;
-          } 
-    
     @extend %grid-item;
 
- 
-    &__:nth-child(2n) {
-     @media screen and (min-width: 768px) {
-        margin-right: 0;
-    }
-}
+    @media screen and (min-width: 768px) {
+        --items: 2;
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+          } 
+    
+
+    // &__:nth-child(2n) {
+    //  @media screen and (min-width: 768px) {
+    //     margin-right: 0;
+    // }
+// }
 
     &__image {
         display: block;
@@ -46,8 +47,8 @@
         height: 460px; 
         
         @media screen and (min-width: 768px) {
-        width: 354;
-        height: 374; 
+        width: 354px;
+        height: 374px; 
            }   
     }
 

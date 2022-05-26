@@ -14,18 +14,26 @@
 
 .client-list {
     @extend %list;
-    @include centeredFlex(flex);
+    @extend %grid;
+    justify-content: center;
 }
 
 .client {
+    text-align: center;
+    @extend %grid-item;
     --items: 2;
+
+
     @media screen and (min-width: 768px) {
         --items: 3;
         }     
-    @extend %grid-item;
     
-    &:not(:last-child) {
-        margin-right: 30px;
+    
+    // &:not(:last-child) {
+    //     margin-right: 30px;
+    // }
+    &:nth-child(2n) {
+        margin-right: 0;
     }
     
     &__link {

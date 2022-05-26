@@ -7,12 +7,13 @@
 
 .container {
     @extend %container;
+    text-align: center;
 }
 
-.page-footer__container {
-    @include centeredFlex(flex);
-    align-items: baseline;
-}
+// .page-footer__container {
+//     @include centeredFlex(flex);
+//     align-items: baseline;
+// }
 
 .logo {
     font-family: var(--secondary-font);
@@ -21,6 +22,9 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
+
+    display: block;
+    margin-bottom: 20px;
 
     &__web {
         color: var(--accent-color);
@@ -33,7 +37,9 @@
 
 .address {
     display: block;
-    margin-right: 60px;
+    // margin-right: 60px;
+
+    margin-bottom: 60px;
 
     &__text {
         margin: 0;
@@ -72,7 +78,9 @@
 
 .social-links {
     display: inline-block;
-    margin-right: 93px;
+    // margin-right: 93px;
+    
+    margin-bottom: 60px;
 
     &__text {
         margin-bottom: 20px;
@@ -96,7 +104,9 @@
 .footer-form {
     &__text {
     
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
+
+        margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
         line-height: 1.14;
@@ -106,6 +116,8 @@
     }
     &__field {
         position: relative;
+
+        margin-bottom: 20px;
     }
 
     &__input::placeholder {
@@ -126,9 +138,11 @@
         border-radius: 4px;
         background-color: transparent;
         border: 1px solid var(--footer-form-border-cl);
-        width: 358px;
+        // width: 358px;
+        width: 310px;
         height: 50px;
-        margin-right: 12px;
+        // margin-right: 12px;
+        margin-bottom: 20px;
     
         transition: border var(--transition-duration) var(--transition-timing-function);
     }
@@ -141,25 +155,26 @@
     }
 
     &__btn {
-        position: relative;
+        // position: relative;
         @include centeredFlex(inline-flex);
         @extend %btn;
+        display: inline-block;
+        // top:20px;
     }
     &__btn:hover,
     &__btn:focus {
         background-color: #0B5E9E;
     }
 
-    &__icon {
-        position: absolute;
-        right: 15px;
-    
-        display: inline-block;
-    
-        fill: var(--primary-background-color);
-    
-        transition: background-color var(--transition-duration) var(--transition-timing-function);
+    &__btn::after {
+        content: ' ';
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L0 13.5L7.66994 16.3407L19.5 5.25002L10.5017 17.3896L10.509 17.3923L10.5 17.3896V24.0001L14.8013 18.982L20.2501 21.0001L24 0Z' fill='white'/%3E%3C/svg%3E%0A");        
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding-left: 30px;
     }
-}
 
 /*#endregion*/
