@@ -20,6 +20,7 @@
 
         @media screen and (min-width: 1200px) {
             flex-wrap: nowrap;
+            text-align: start;
        }
     }
 }
@@ -41,6 +42,7 @@
 
     @media screen and (min-width: 1200px) {
         margin-right: 0;
+        text-align: left;
     }
 
     &__web {
@@ -63,11 +65,13 @@
 
         color: var(--primary-background-color);
         font-style: normal;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 20px;
+        }
     }
     &__list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        @extend %list;
     }
     
     &__item:not(:last-child) {
@@ -198,9 +202,7 @@
         display: inline-block;
         
         @media screen and (min-width: 1200px) {
-            position: relative;
-            // top:20px;}
-
+            position: relative;}
     }
     &__btn:hover,
     &__btn:focus {

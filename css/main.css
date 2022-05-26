@@ -79,7 +79,7 @@ body {
   padding: 60px 0px 60px 0px;
 }
 
-.site-nav__list, .feature, .work, .team-list, .social-list, .client-list, .filter, .portfolio {
+.site-nav__list, .feature, .work, .team-list, .social-list, .client-list, .address__list, .filter, .portfolio {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -988,6 +988,7 @@ body {
   .page-footer__container {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    text-align: start;
   }
 }
 
@@ -1035,10 +1036,10 @@ body {
   font-style: normal;
 }
 
-.address__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+@media screen and (min-width: 1200px) {
+  .address__text {
+    margin-bottom: 20px;
+  }
 }
 
 .address__item:not(:last-child) {
@@ -1067,7 +1068,6 @@ body {
 @media screen and (min-width: 1200px) {
   .address {
     margin-right: 60px;
-    text-align: left;
   }
 }
 
@@ -1113,7 +1113,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .footer-form__text {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1209,7 +1209,6 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-form__btn {
     position: relative;
-    top: 20px;
   }
 }
 
