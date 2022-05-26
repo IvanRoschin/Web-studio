@@ -1,6 +1,6 @@
 /*#region FOOTER*/
 .page-footer {
-    padding: 60px 0 60px 0;
+    padding: 60px, 0, 0, 60px;
     background-color: var(--secondary-background-color);
     width: 100%; 
 }
@@ -37,7 +37,7 @@
 
 .address {
     display: block;
-    // margin-right: 60px; 1200
+    // margin-right: 60px;
 
     margin-bottom: 60px;
 
@@ -78,7 +78,7 @@
 
 .social-links {
     display: inline-block;
-    // margin-right: 93px; 1200
+    // margin-right: 93px;
     
     margin-bottom: 60px;
 
