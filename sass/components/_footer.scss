@@ -1,6 +1,6 @@
 /*#region FOOTER*/
 .page-footer {
-    padding: 60px  60px;
+    padding: 60px 0 60px 0;
     background-color: var(--secondary-background-color);
     width: 100%; 
 }
@@ -37,7 +37,7 @@
 
 .address {
     display: block;
-    // margin-right: 60px;
+    // margin-right: 60px; 1200
 
     margin-bottom: 60px;
 
@@ -78,7 +78,7 @@
 
 .social-links {
     display: inline-block;
-    // margin-right: 93px;
+    // margin-right: 93px; 1200
     
     margin-bottom: 60px;
 
@@ -176,5 +176,5 @@
         background-position: center;
         padding-left: 30px;
     }
-
+}
 /*#endregion*/
