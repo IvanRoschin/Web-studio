@@ -21,13 +21,22 @@
     @extend %list;
     @include centeredFlex(Flex);
 
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     &__item:not(:last-child) {
         margin-right: 8px;
      }
 
     &__btn {
         padding: 6px 22px;
-        margin-bottom: 34px;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 34px;
+        }
     
         background-color: var(--third-background-color);
         color: var(--title-text-color);
@@ -70,8 +79,15 @@
     @extend %grid;
 
     &__item {
-        --item: 3;
-        // @extend %grid-item;
+        --items: 1;
+      
+        @media screen and (min-width: 768px) {
+           --items: 2;
+          }  
+        @media screen and (min-width: 1200px) {
+           --items: 4;
+             }  
+         @extend %grid-item;
     }
     
     &__item:nth-last-child(-n+3) {

@@ -152,7 +152,7 @@ body {
   gap: var(--indent);
 }
 
-.feature__item, .team-card, .client {
+.feature__item, .team-card, .client, .portfolio__item {
   -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
       flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
@@ -466,7 +466,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
+  width: 450px;
   padding: 40px;
   background-color: var(--primary-background-color);
   -webkit-transform: translate(-50%, -50%) scale(0.9);
@@ -475,6 +475,12 @@ body {
   transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal-x {
@@ -511,7 +517,7 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 0.7;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -666,10 +672,16 @@ body {
   display: inline-block;
   margin-left: 20px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+  }
 }
 
 .checkbox__link {
@@ -1241,13 +1253,23 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
 .filter__btn {
   padding: 6px 22px;
-  margin-bottom: 34px;
+  margin-bottom: 15px;
   background-color: var(--third-background-color);
   color: var(--title-text-color);
   font-family: inherit;
@@ -1262,6 +1284,12 @@ body {
   transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function);
   transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), -webkit-box-shadow var(--transition-duration) var(--transition-timing-function);
+}
+
+@media screen and (min-width: 768px) {
+  .filter__btn {
+    margin-bottom: 34px;
+  }
 }
 
 .filter__btn:hover, .filter__btn:focus {
@@ -1280,7 +1308,19 @@ body {
 /*#endregion*/
 /*#region portfolio*/
 .portfolio__item {
-  --item: 3;
+  --items: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    --items: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    --items: 4;
+  }
 }
 
 .portfolio__item:nth-last-child(-n+3) {
