@@ -1319,7 +1319,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .portfolio__item {
-    --items: 4;
+    --items: 3;
   }
 }
 
