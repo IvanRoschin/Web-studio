@@ -26,16 +26,16 @@
     border-radius: 0px 0px 4px 4px;
 
     --items: 1;
-
-    @extend %grid-item;
-
+      
     @media screen and (min-width: 768px) {
-        --items: 2;
-        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-          } 
-    
+       --items: 2;
+      }  
+    @media screen and (min-width: 1200px) {
+       --items: 4;
+         }  
+     @extend %grid-item;
 
-    // &__:nth-child(2n) {
+       // &__:nth-child(2n) {
     //  @media screen and (min-width: 768px) {
     //     margin-right: 0;
     // }
@@ -50,6 +50,11 @@
         width: 354px;
         height: 374px; 
            }   
+
+        @media screen and (min-width: 1200px) {
+        width: 270px;
+        height: 260px; 
+               }   
     }
 
     &__meta {

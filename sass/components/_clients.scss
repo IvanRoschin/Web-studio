@@ -16,25 +16,36 @@
     @extend %list;
     @extend %grid;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+       }  
+    
 }
 
 .client {
     text-align: center;
     @extend %grid-item;
-    --items: 2;
-
+        --items: 2;
 
     @media screen and (min-width: 768px) {
         --items: 3;
-        }     
+       }   
     
+    @media screen and (min-width: 1200px) {
+         --items: 7;
+        }  
+    
+    // &:nth-child(2n) {
+    //     @media screen and (min-width: 768px) {
+    //         margin-right: 0;
+    //     }
     
     // &:not(:last-child) {
-    //     margin-right: 30px;
-    // }
-    &:nth-child(2n) {
-        margin-right: 0;
-    }
+    //     @media screen and (min-width: 1200px) {
+    //         margin-right: 30px;
+    //         }  
+    //     }
+ 
     
     &__link {
         display: block;

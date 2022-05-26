@@ -1,5 +1,6 @@
 /*#region FOOTER*/
 .page-footer {
+
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--secondary-background-color);
@@ -16,10 +17,11 @@
         @include centeredFlex(flex);
         align-items: baseline;
         flex-wrap: wrap;
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
 
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+       }
+    }
 }
 
 .logo-footer {
@@ -35,8 +37,12 @@
 
     @media screen and (min-width: 768px) {
         margin-right: 165px;
-        text-align: center;
     }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 0;
+    }
+
     &__web {
         color: var(--accent-color);
     }
@@ -47,9 +53,8 @@
 }
 
 .address {
+  
     display: block;
-    // margin-right: 60px;
-
     margin-bottom: 60px;
 
     &__text {
@@ -87,14 +92,17 @@
     @media screen and (min-width: 768px) {
         margin-right: 165px;
     }
+    @media screen and (min-width: 1200px) {
+        margin-right: 60px;
+    }
+
 }
 
 /* Footer social-links */
 
 .social-links {
     display: inline-block;
-    // margin-right: 93px;
-    
+
     margin-bottom: 60px;
 
     &__text {
@@ -105,6 +113,11 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primary-background-color);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+       
     }
 }
 
@@ -120,8 +133,6 @@
 
     &__text {
     
-        // margin-bottom: 10px;
-
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
@@ -129,6 +140,10 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primary-background-color);
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 20px;
+        }
     }
     &__field {
         position: relative;
@@ -154,16 +169,18 @@
         border-radius: 4px;
         background-color: transparent;
         border: 1px solid var(--footer-form-border-cl);
-        // width: 358px;
         width: 310px;
         height: 50px;
-        // margin-right: 12px;
         margin-bottom: 20px;
-    
         transition: border var(--transition-duration) var(--transition-timing-function);
 
         @media screen and (min-width: 768px) {
             width: 100%;
+        }
+
+        @media screen and (min-width: 1200px) {
+           width: 358px;
+           margin-right: 12px;
         }
     }
 
@@ -175,11 +192,15 @@
     }
 
     &__btn {
-        // position: relative;
+        
         @include centeredFlex(inline-flex);
         @extend %btn;
         display: inline-block;
-        // top:20px;
+        
+        @media screen and (min-width: 1200px) {
+            position: relative;
+            // top:20px;}
+
     }
     &__btn:hover,
     &__btn:focus {
