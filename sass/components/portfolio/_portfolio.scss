@@ -103,6 +103,10 @@
         text-decoration: none;
         transition: transform var(--transition-duration) var(--transition-timing-function),
             opacity var(--transition-duration) var(--transition-timing-function);
+        
+            @media screen and (min-width: 768px) {
+                display: flex;
+                  }     
     }
 
     &__link:hover,
@@ -163,6 +167,10 @@
         line-height: 1.56;
         letter-spacing: 0.03em;
         color: var(--primary-background-color);
+
+        @media screen and (min-width: 768px) {
+            flex-grow: inherit;
+              } 
     }
 
     &__meta {
