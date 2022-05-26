@@ -35,11 +35,11 @@
 }
 
 .page-header__logo {
-    // margin-right: 93px;
+    // margin-right: 93px; 1200
     margin-right: 276px;
     
     @media screen and (min-width: 768px) {
-        // margin-right: 88px;
+        margin-right: 88px;
     }
 
 }
@@ -61,13 +61,7 @@
     
     &__list {
         @extend %list;
-      
-    
-        // @media screen and (min-width: 768px) {
-        //    @include centeredFlex (flex);
-        //    margin: 0;
-        //    margin-left: auto;
-        // }
+        @include centeredFlex (flex);
     }
 
     &__item:not(:last-child) {
