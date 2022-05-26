@@ -10,10 +10,16 @@
     text-align: center;
 }
 
-// .page-footer__container {
-//     @include centeredFlex(flex);
-//     align-items: baseline;
-// }
+.page-footer__container {
+    @media screen and (min-width: 768px) {
+        @include centeredFlex(flex);
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
 
 .logo {
     font-family: var(--secondary-font);
@@ -26,6 +32,10 @@
     display: block;
     margin-bottom: 20px;
 
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+        text-align: center;
+    }
     &__web {
         color: var(--accent-color);
     }
@@ -72,6 +82,10 @@
     &__link:focus {
         color: var(--primary-background-color);
     }
+
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+    }
 }
 
 /* Footer social-links */
@@ -102,6 +116,7 @@
 /* footer form */
 
 .footer-form {
+
     &__text {
     
         // margin-bottom: 10px;
@@ -145,6 +160,10 @@
         margin-bottom: 20px;
     
         transition: border var(--transition-duration) var(--transition-timing-function);
+
+        @media screen and (min-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__input:focus,
