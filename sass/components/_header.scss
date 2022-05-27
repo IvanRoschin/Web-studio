@@ -1,5 +1,6 @@
 /*#region HEADER*/
 .page-header {
+    display: flex;
     background-color: var(--white-color);
     border-bottom: 1px solid var(--portfolio-border-cl);
 }
@@ -43,8 +44,7 @@
 
 
 .page-header__logo {
-    margin-right: 200px;
-
+    
     @media screen and (min-width: 480px)  {
         margin-right: 276px;
     }  
@@ -58,21 +58,11 @@
     } 
 }
 
-/* site-nav */ 
-.site-nav {
-    // @include centeredFlex (flex);
-    // justify-content: flex-end;
-
-    // @media screen and (max-width: 767px)  {
-    //     display: flex;
-    //     align-items: center;
-    // }  }
-}
-
 .menu-button {
+
     display: inline-flex;
     align-items: center;
-    margin: 0;
+    margin-left: auto;
     padding: 0;
     border: 0;
     background-color: transparent; 
@@ -106,9 +96,6 @@
 // Menu-container
 
 .menu-container {
-
-    outline: 3px solid red;
-
     text-align: left;
     font-size: 20px;
     &.is-open {

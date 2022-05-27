@@ -170,6 +170,9 @@ body.modal-open {
 /*#endregion*/
 /*#region HEADER*/
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: var(--white-color);
   border-bottom: 1px solid var(--portfolio-border-cl);
 }
@@ -216,10 +219,6 @@ body.modal-open {
   color: #000000;
 }
 
-.page-header__logo {
-  margin-right: 200px;
-}
-
 @media screen and (min-width: 480px) {
   .page-header__logo {
     margin-right: 276px;
@@ -238,7 +237,6 @@ body.modal-open {
   }
 }
 
-/* site-nav */
 .menu-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -246,7 +244,7 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+  margin-left: auto;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -281,7 +279,6 @@ body.modal-open {
 }
 
 .menu-container {
-  outline: 3px solid red;
   text-align: left;
   font-size: 20px;
 }
