@@ -32,31 +32,34 @@
           ><span class="logo__web">Web</span
           ><span class="logo__studio">Studio</span></a
         >
+
         <nav class="site-nav">
-          <button class="site-nav__button" type="button" aria-expanded="false" aria-controls="site-nav__list"  data-menu-button>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container"  data-menu-button>
             <svg class="" width="40" height="40" aria-label="Переключатель мобильного меню">
-              <use class="site-nav__icon-cross" href="./images/icons.svg#icon-cross"></use>
-              <use class="site-nav__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
+        </nav>
 
-          <ul class="site-nav__list" id="site-nev__list" data-menu>
-            <li class="site-nav__item">
+        <div class="menu-container" id="menu-container" data-menu>
+
+          <ul class="navigation" >
+            <li class="navigation__item">
               <a
-                class="site-nav__link site-nav__link--current"
+                class="navigation__link navigation__link--current"
                 href="index.html"
                 >Студия</a
               >
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./portfolio.html">Портфолио</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="WebStudio.com">Контакты</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="WebStudio.com">Контакты</a>
             </li>
           </ul>
-        </nav>
-
+        
         <ul class="contacts">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com"
@@ -83,6 +86,10 @@
             >
           </li>
         </ul>
+
+      </div>
+
+
       </div>
     </header>
     <!--main-->

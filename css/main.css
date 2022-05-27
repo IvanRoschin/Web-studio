@@ -89,7 +89,7 @@ body.modal-open {
   padding: 60px 0px 60px 0px;
 }
 
-.site-nav__list, .feature, .work, .team-list, .social-list, .client-list, .address__list, .filter, .portfolio {
+.navigation, .contacts, .feature, .work, .team-list, .social-list, .client-list, .address__list, .filter, .portfolio {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -172,6 +172,7 @@ body.modal-open {
 .page-header {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--portfolio-border-cl);
+  position: relative;
 }
 
 .page-header__container {
@@ -184,7 +185,9 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .logo {
@@ -234,22 +237,7 @@ body.modal-open {
 }
 
 /* site-nav */
-.site-nav {
-  /* UNDERLINE*/
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.site-nav__button {
+.menu-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -263,69 +251,82 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav__button {
+  .menu-button {
     display: none;
   }
 }
 
-.site-nav__icon-cross {
+.icon-cross {
   display: none;
 }
 
-.site-nav__button.is-open .site-nav__icon-cross {
+.menu-button.is-open .icon-cross {
   display: block;
 }
 
-.site-nav__button.is-open .site-nav__icon-menu {
+.menu-button.is-open .icon-menu {
   display: none;
 }
 
-.site-nav__list {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: transparent;
+.menu-container {
+  text-align: left;
+  font-size: 20px;
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
-  .site-nav__list {
-    display: none;
+  .menu-container {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: greenyellow;
-    height: 400px;
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
+    padding: 48px 40px;
+    display: none;
+    background-color: var(--white-color);
   }
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav__list.is-open {
-    display: block;
-  }
-}
-
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav__item {
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav__link {
-    display: block;
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.navigation {
+  outline: 3px solid red;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 767px) {
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    /* Current-link*/
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation__item {
+    position: relative;
+  }
+  .navigation__link {
     color: var(--title-text-color);
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -336,23 +337,14 @@ body.modal-open {
     -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
     transition: color var(--transition-duration) var(--transition-timing-function);
   }
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav__link:hover, .site-nav__link:focus {
+  .navigation__link:hover, .navigation__link:focus {
     color: var(--accent-color);
   }
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav__link--current {
+  .navigation__link--current {
     color: var(--accent-color);
     position: relative;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .site-nav__link--current::after {
+  .navigation__link--current::after {
     content: '';
     position: absolute;
     left: 0;
@@ -365,10 +357,12 @@ body.modal-open {
 }
 
 /* contact links */
-@media screen and (max-width: 767px) {
-  .contacts {
-    display: none;
-  }
+.contacts {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 @media screen and (min-width: 768px) {
