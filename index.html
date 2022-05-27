@@ -33,14 +33,14 @@
           ><span class="logo__studio">Studio</span></a
         >
         <nav class="site-nav">
-          <button class="site-nav__button is-open" type="button" [data-menu-button]>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <button class="site-nav__button" type="button" aria-expanded="false" aria-controls="site-nev__list"  data-menu-button>
+            <svg class="" width="40" height="40" aria-label="Переключатель мобильного меню">
               <use class="site-nav__icon-cross" href="./images/icons.svg#icon-cross"></use>
               <use class="site-nav__icon-menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
 
-          <ul class="site-nav__list">
+          <ul class="site-nav__list" id="site-nev__list" data-menu>
             <li class="site-nav__item">
               <a
                 class="site-nav__link site-nav__link--current"
