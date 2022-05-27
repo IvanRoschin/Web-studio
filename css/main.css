@@ -1183,6 +1183,12 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    margin-right: 165px;
+  }
+}
+
 .logo-footer {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -1196,7 +1202,7 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .logo-footer {
-    margin-right: 165px;
+    margin-right: 0;
   }
 }
 
@@ -1222,12 +1228,14 @@ body.modal-open {
 .address__text {
   margin: 0;
   margin-bottom: 10px;
+  width: 100%;
   color: var(--primary-background-color);
   font-style: normal;
 }
 
 @media screen and (min-width: 1200px) {
   .address__text {
+    margin-right: 70px;
     margin-bottom: 20px;
   }
 }
@@ -1257,7 +1265,7 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .address {
-    margin-right: 165px;
+    margin-right: 0;
   }
 }
 
