@@ -33,6 +33,13 @@
           ><span class="logo__studio">Studio</span></a
         >
         <nav class="site-nav">
+          <button class="site-nav__button is-open" type="button" [data-menu-button]>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="site-nav__icon-cross" href="./images/icons.svg#icon-cross"></use>
+              <use class="site-nav__icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a
@@ -856,6 +863,7 @@
         </div>
       </div>
     </footer>
-    <script src="./JS/modal.js"></script>
+    <script src="./java/modal.js"></script>
+    <script src="./java/menu.js"></script>
   </body>
 </html>

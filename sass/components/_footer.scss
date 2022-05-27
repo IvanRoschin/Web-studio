@@ -57,7 +57,7 @@
 .address {
   
     display: block;
-    margin-bottom: 60px;
+    // margin-bottom: 60px; 
 
     &__text {
         margin: 0;
@@ -93,11 +93,15 @@
         color: var(--primary-background-color);
     }
 
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
     @media screen and (min-width: 768px) {
         margin-right: 165px;
     }
     @media screen and (min-width: 1200px) {
-        margin-right: 60px;
+        margin-bottom: 0;
     }
 
 }
@@ -109,6 +113,10 @@
 
     margin-bottom: 60px;
 
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;  
+    }
+
     &__text {
         margin-bottom: 20px;
         font-weight: 700;
@@ -117,11 +125,6 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--primary-background-color);
-    }
-    
-    @media screen and (min-width: 1200px) {
-        margin-right: 93px;
-       
     }
 }
 

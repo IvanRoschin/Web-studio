@@ -2,6 +2,11 @@
 .page-header {
     background-color: var(--white-color);
     border-bottom: 1px solid var(--portfolio-border-cl);
+    // @media screen and (max-width: 767px)  {
+    //     padding-top: 10px;
+    //     padding-bottom: 10px;
+    // } 
+
 }
 
 .container {
@@ -9,9 +14,7 @@
 }
 
 .page-header__container {
-    @media screen and (min-width: 768px) {
-        @include centeredFlex (flex);
-       }  
+    @include centeredFlex (flex);       
   }
 
 
@@ -40,8 +43,8 @@
 
 
 .page-header__logo {
-    
     margin-right: 276px;
+
     @media screen and (min-width: 768px)  {
         margin-right: 88px;
     }   
@@ -54,22 +57,48 @@
 
 /* site-nav */
 .site-nav {
-    @media screen and (max-width: 768px) {
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
+    @media screen and (max-width: 767px)  {
+        display: flex;
+        align-items: center;
+    }  
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
         padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;;
+        border: 0;
+        background-color: transparent; 
+
+        @media screen and (min-width: 768px) {
+            display: none;
     }
+     
+    }
+
+     &__icon-cross {
+        display: none;
+    }
+
+    // &__icon-menu {}
+
+    &__button.is-open &__icon-cross {
+        display: block;
+    }
+
+    &__button.is-open &__icon-menu {
+        display: none;
+    }
+
     
     &__list {
         @extend %list;
         @include centeredFlex (flex);
+
+        @media screen and (max-width: 767px) {
+            display: none;
+    }
+
+
     }
 
     &__item:not(:last-child) {
@@ -123,18 +152,8 @@
 }           
 /* contact links */
  .contacts {
-
-    @media screen and (max-width: 768px) {
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;
+    @media screen and (max-width: 767px) {
+        display: none;
 }
 
     @media screen and (min-width: 768px) {
