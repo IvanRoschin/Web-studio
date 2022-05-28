@@ -52,12 +52,17 @@ body.modal-open {
   overflow: hidden;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 320px) {
@@ -170,11 +175,9 @@ body.modal-open {
 /*#endregion*/
 /*#region HEADER*/
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: var(--white-color);
   border-bottom: 1px solid var(--portfolio-border-cl);
+  position: relative;
 }
 
 .page-header__container {
@@ -190,7 +193,6 @@ body.modal-open {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: relative;
 }
 
 .logo {
@@ -279,6 +281,7 @@ body.modal-open {
 }
 
 .menu-container {
+  outline: 3px solid red;
   text-align: left;
   font-size: 20px;
 }
@@ -1003,26 +1006,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .team-card {
     --items: 4;
-  }
-}
-
-.team-card__image {
-  display: block;
-  width: 100%;
-  height: 460px;
-}
-
-@media screen and (min-width: 768px) {
-  .team-card__image {
-    width: 100%;
-    height: 374px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card__image {
-    width: 100%;
-    height: 260px;
   }
 }
 

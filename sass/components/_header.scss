@@ -1,8 +1,9 @@
 /*#region HEADER*/
 .page-header {
-    display: flex;
     background-color: var(--white-color);
     border-bottom: 1px solid var(--portfolio-border-cl);
+    position: relative;
+
 }
 
 .container {
@@ -12,7 +13,6 @@
 .page-header__container {
     @include centeredFlex (flex);
     justify-content: flex-start; 
-    position: relative;
   
   }
 
@@ -44,7 +44,7 @@
 
 
 .page-header__logo {
-    
+
     @media screen and (min-width: 480px)  {
         margin-right: 276px;
     }  
@@ -59,7 +59,6 @@
 }
 
 .menu-button {
-
     display: inline-flex;
     align-items: center;
     margin-left: auto;
@@ -96,6 +95,9 @@
 // Menu-container
 
 .menu-container {
+
+    outline: 3px solid red;
+
     text-align: left;
     font-size: 20px;
     &.is-open {
