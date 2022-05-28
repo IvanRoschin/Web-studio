@@ -26,9 +26,12 @@
     border-radius: 0px 0px 4px 4px;
 
        --items: 1;
+       margin-left: auto;
+       margin-right: auto;
       
     @media screen and (min-width: 768px) {
        --items: 2;
+
       }  
     @media screen and (min-width: 1200px) {
        --items: 4;
@@ -36,11 +39,11 @@
      @extend %grid-item;
 
 
-    // &__image {
-    //     display: block;
-    //     width: 100%;
-    //     height: 460px; 
-        
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto; 
+    }
     //     @media screen and (min-width: 768px) {
     //     width: 100%;
     //     height: 374px; 
