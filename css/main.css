@@ -286,8 +286,10 @@ img {
   font-size: 20px;
 }
 
-.menu-container.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .menu-container.is-open {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 767px) {
