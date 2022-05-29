@@ -9,32 +9,42 @@
     @extend %container;
 }
 
-.hero--overlay {
-
-    height: 400px;
-    max-width: 480px;
+.hero--overlay {  
     margin-left: auto;
     margin-right: auto;
 
     background-image: linear-gradient(to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)), url("../images/header-bg.jpg");
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-header-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-        max-width: 768px;
-    }
+    // Can I use информирует о поддержке функции image-set в Firefox
+    @media screen and (min-width: 489px) and (max-width:767px) {
+    background-image: image-set(
+    url("../images/hero/mobile-header-img.jpg") 1x,
+    url("../images/hero/mobile-header-img@2x.jpg") 2x);}
+ 
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+    background-image: image-set(
+    url("../images/hero/tablet-header-img.jpg") 1x,
+    url("../images/hero/tablet-header-img@2x.jpg") 2x);}
 
     @media screen and (min-width: 1200px) {
-        max-width: 1600px;
-    }
-}
+    background-image: image-set(
+    url("../images/hero/desktop-header-img.jpg") 1x,
+    url("../images/hero/desktop-header-img@2x.jpg") 2x);}
+} 
+ 
+// @media 
+// screen and (min-device-pixel-ratio:2),
+// screen and (min-resolution: 192dpi),
+// screen and (min-resolution: 2dppx) {
+//     .hero--overlay {
+//         background-image: url("../images/hero/img@2x.jpg");
+//     }
+// }
 
 .title-hero {
     margin-top: 0;
