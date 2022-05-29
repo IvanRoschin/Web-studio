@@ -11,7 +11,6 @@
 
 .page-header__container {
     @include centeredFlex (flex);
-    justify-content: flex-start; 
   }
 
 
@@ -61,7 +60,8 @@
     display: inline-flex;
     align-items: center;
     margin-left: auto;
-    padding: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
     border: 0;
     background-color: transparent; 
 

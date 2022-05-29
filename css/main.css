@@ -58,6 +58,10 @@ img {
   height: auto;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -189,9 +193,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .logo {
@@ -246,7 +247,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
-  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
   border: 0;
   background-color: transparent;
 }
