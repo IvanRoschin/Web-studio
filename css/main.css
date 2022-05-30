@@ -98,6 +98,12 @@ img {
   padding: 60px 0px 60px 0px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section, .setion-team {
+    padding: 94px 0px 94px 0px;
+  }
+}
+
 .navigation, .contacts, .feature, .work, .team-list, .social-list, .client-list, .address__list, .filter, .portfolio {
   padding: 0;
   margin: 0;
@@ -126,6 +132,12 @@ img {
   text-align: center;
   margin-bottom: 30px;
   margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .title, .title-work {
+    margin-bottom: 50px;
+  }
 }
 
 .btn, .modal-form-btn, .footer-form__btn {
@@ -181,6 +193,7 @@ img {
 .page-header {
   background-color: var(--white-color);
   position: relative;
+  border-bottom: 1px solid var(--portfolio-border-cl);
 }
 
 .page-header__container {
@@ -324,9 +337,9 @@ img {
   }
 }
 
-/* .navigation {
+.navigation {
   /* Current-link*/
-/* } */
+}
 
 @media screen and (min-width: 768px) {
   .navigation {
