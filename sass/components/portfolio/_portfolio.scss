@@ -105,15 +105,12 @@
 
     &__link {
         display: block;
+        height: 100%;
         text-decoration: none;
         transition: transform var(--transition-duration) var(--transition-timing-function),
             opacity var(--transition-duration) var(--transition-timing-function);
         display: flex;
-        flex-direction: column;
-        
-            // @media screen and (min-width: 768px) {
-            //     display: flex;
-            //       }     
+        flex-direction: column; 
     }
 
     &__link:hover,

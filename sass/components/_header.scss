@@ -98,7 +98,8 @@
     font-size: 20px;
     &.is-open {
         @media screen and (max-width: 767px) {
-            display: block;          
+            display: block;
+            height: 100vh;
         }
     } 
       

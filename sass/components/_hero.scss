@@ -67,53 +67,6 @@
     }
 }
 
-
-
-
-
-
-    // Can I use информирует о поддержке функции image-set в Firefox
-    // @media screen and (max-width: 480px) {   
-    // background-image: linear-gradient(to right,
-    // rgba(47, 48, 58, 0.4),
-    // rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-header-img.jpg");
-    
-    // background-image: image-set(
-    // url("../images/hero/mobile-header-img.jpg") 1x,
-    // url("../images/hero/mobile-header-img@2x.jpg") 2x);
-
-// }
- 
-    // @media screen and (min-width: 481px) and (max-width:768px) {
-    // background-image: linear-gradient(to right,
-    // rgba(47, 48, 58, 0.4),
-    // rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-header-img.jpg");
-    
-    // background-image: image-set(
-    // url("../images/hero/tablet-header-img.jpg") 1x,
-    // url("../images/hero/tablet-header-img@2x.jpg") 2x);}
-
-    // @media screen and (min-width: 769px) {
-    
-    // background-image: linear-gradient(to right,
-    // rgba(47, 48, 58, 0.4),
-    // rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-header-img.jpg");
- 
-    // background-image: image-set(
-    // url("../images/hero/desktop-header-img.jpg") 1x,
-    // url("../images/hero/desktop-header-img@2x.jpg") 2x);}
-
-// } 
- 
-// @media 
-// screen and (min-device-pixel-ratio:2),
-// screen and (min-resolution: 192dpi),
-// screen and (min-resolution: 2dppx) {
-//     .hero--overlay {
-//         background-image: url("../images/hero/img@2x.jpg");
-//     }
-// }
-
 .title-hero {
     margin-top: 0;
     margin-bottom: 30px;
