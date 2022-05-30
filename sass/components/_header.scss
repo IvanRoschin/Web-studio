@@ -13,7 +13,6 @@
     @include centeredFlex (flex);
   }
 
-
 .logo {
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -91,9 +90,6 @@
     display: none;
 }
 
-// .menu-button.is-open .logo {
-//     @extend %visually-hidden;
-// }
 
 // Menu-container
 

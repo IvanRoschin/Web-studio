@@ -1,9 +1,14 @@
 /*#region SECTION HERO*/
 
 .section-hero {
-    // padding: 200px 0px 200px 0px;
     padding: 118px 0 118px 0;
     text-align: center;
+
+    @media screen and (min-width: 1200px)  {
+    padding: 200px 0px 200px 0px;
+
+    }
+
 }
 .container {
     @extend %container;
@@ -13,29 +18,91 @@
     margin-left: auto;
     margin-right: auto;
 
-    background-image: linear-gradient(to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-header-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    // Can I use информирует о поддержке функции image-set в Firefox
-    @media screen and (max-width: 480px) {
-    background-image: image-set(
-    url("../images/hero/mobile-header-img.jpg") 1x,
-    url("../images/hero/mobile-header-img@2x.jpg") 2x);}
- 
-    @media screen and (min-width: 481px) and (max-width:768px) {
-    background-image: image-set(
-    url("../images/hero/tablet-header-img.jpg") 1x,
-    url("../images/hero/tablet-header-img@2x.jpg") 2x);}
+    background-image: linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-header-img.jpg");
 
-    @media screen and (min-width: 769px) {
-    background-image: image-set(
-    url("../images/hero/desktop-header-img.jpg") 1x,
-    url("../images/hero/desktop-header-img@2x.jpg") 2x);}
-} 
+    @media screen and (max-width: 480px) { 
+            @media 
+            screen and (min-device-pixel-ratio:2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),url("../images/hero/mobile-header-img@2x.jpg");}
+    }  
+    
+    @media screen and (min-width: 481px) and (max-width:768px) {
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-header-img.jpg");
+
+            @media 
+            screen and (min-device-pixel-ratio:2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),url("../images/hero/tablet-header-img@2x.jpg");}
+    }
+
+     @media screen and (min-width: 769px) and (max-width:1600px) {
+             background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-header-img.jpg");
+            max-width: 1600px;
+
+            @media 
+            screen and (min-device-pixel-ratio:2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),url("../images/hero/desktop-header-img@2x.jpg");}
+    }
+}
+
+
+
+
+
+
+    // Can I use информирует о поддержке функции image-set в Firefox
+    // @media screen and (max-width: 480px) {   
+    // background-image: linear-gradient(to right,
+    // rgba(47, 48, 58, 0.4),
+    // rgba(47, 48, 58, 0.4)), url("../images/hero/mobile-header-img.jpg");
+    
+    // background-image: image-set(
+    // url("../images/hero/mobile-header-img.jpg") 1x,
+    // url("../images/hero/mobile-header-img@2x.jpg") 2x);
+
+// }
+ 
+    // @media screen and (min-width: 481px) and (max-width:768px) {
+    // background-image: linear-gradient(to right,
+    // rgba(47, 48, 58, 0.4),
+    // rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-header-img.jpg");
+    
+    // background-image: image-set(
+    // url("../images/hero/tablet-header-img.jpg") 1x,
+    // url("../images/hero/tablet-header-img@2x.jpg") 2x);}
+
+    // @media screen and (min-width: 769px) {
+    
+    // background-image: linear-gradient(to right,
+    // rgba(47, 48, 58, 0.4),
+    // rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-header-img.jpg");
+ 
+    // background-image: image-set(
+    // url("../images/hero/desktop-header-img.jpg") 1x,
+    // url("../images/hero/desktop-header-img@2x.jpg") 2x);}
+
+// } 
  
 // @media 
 // screen and (min-device-pixel-ratio:2),
