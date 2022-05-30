@@ -17,20 +17,27 @@
         @include centeredFlex(flex);
         align-items: baseline;
         flex-wrap: wrap;
-
-        @media screen and (min-width: 1200px) {
-            flex-wrap: nowrap;
-            text-align: start;
-       }
     }
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+        text-align: start;
+   }
 }
 
 .contact {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-right: 165px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px; 
     }
 
-
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: space-around;
+        margin-bottom: 60px; 
+    }
 }
 
 .logo-footer {
@@ -64,7 +71,6 @@
 
 .address {
     display: block;
-    // margin-bottom: 60px; 
 
     &__text {
         margin: 0;
@@ -101,26 +107,18 @@
     &__link:focus {
         color: var(--primary-background-color);
     }
-
-    @media screen and (max-width: 767px) {
-        margin-bottom: 60px;
-    }
-
-    @media screen and (min-width: 768px) {
-        margin-right: 0;
-    }
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 0;
-    }
-
 }
 
 /* Footer social-links */
 
 .social-links {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px; 
+    }
+
     display: inline-block;
 
-    margin-bottom: 60px;
+    
 
     @media screen and (min-width: 1200px) {
         margin-right: 93px;  
