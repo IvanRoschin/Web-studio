@@ -1,52 +1,24 @@
 /*#region SECTION CLIENTS*/
 
-.section {
-    @extend %section;
-}
-
-.container {
-    @extend %container;
-}
-
-.title {
-    @extend %title;
-}
-
 .client-list {
-    @extend %list;
-    @extend %grid;
     justify-content: center;
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         flex-wrap: nowrap;
        }  
-    
 }
 
 .client {
     text-align: center;
-    @extend %grid-item;
         --items: 2;
 
-    @media screen and (min-width: 768px) {
+        @include mq(tablet) {
         --items: 3;
        }   
     
-    @media screen and (min-width: 1200px) {
+       @include mq(desktop) {
          --items: 7;
         }  
-    
-    // &:nth-child(2n) {
-    //     @media screen and (min-width: 768px) {
-    //         margin-right: 0;
-    //     }
-    
-    // &:not(:last-child) {
-    //     @media screen and (min-width: 1200px) {
-    //         margin-right: 30px;
-    //         }  
-    //     }
- 
-    
+       
     &__link {
         display: block;
         border: 1px solid var(--icon-cl);

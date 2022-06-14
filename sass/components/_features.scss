@@ -1,33 +1,15 @@
 /*#region SECTION FEATURES*/
-.section {
-    @extend %section;
-}
-
-.container {
-    @extend %container;
-}
-
-.title {
-    @extend %title;
-}
-.feature-title {
-    @extend %visually-hidden;
-}
 
 .feature {
-   @extend %list;
-   @extend %grid;
-    
+   
     &__item {
-         --items: 1;
       
-      @media screen and (min-width: 768px) {
+         @include mq(tablet) {
          --items: 2;
         }  
-      @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
          --items: 4;
            }  
-       @extend %grid-item;
     }
     
     &__item-group {
@@ -45,7 +27,7 @@
         text-transform: uppercase;
         text-align: center;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
          text-align: left;
         } 
     }

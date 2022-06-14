@@ -42,7 +42,7 @@
 
         <div class="menu-container" id="menu-container" data-menu>
 
-          <ul class="navigation" >
+          <ul class="navigation list">
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__link--current"
@@ -58,7 +58,7 @@
             </li>
           </ul>
         
-        <ul class="contacts">
+        <ul class="contacts list">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com"
               ><svg
@@ -135,7 +135,7 @@
           <h1 class="title-hero">
             Эффективные решения <br />для вашего бизнеса
           </h1>
-          <button data-modal-open class="btn" type="button">
+          <button  data-modal-open class="btn" type="button">
             Заказать услугу
           </button>
           <!-- modalka -->
@@ -249,7 +249,7 @@
                   >
                 </label>
 
-                <button class="modal-form-btn" type="submit">Отправить</button>
+                <button class="modal-form-btn btn" type="submit">Отправить</button>
               </form>
             </div>
           </div>
@@ -258,9 +258,9 @@
       <!--section feature-->
       <section class="section">
         <div class="container">
-          <h2 class="title feature-title">Преимущества студии</h2>
-          <ul class="feature">
-            <li class="feature__item">
+          <h2 class="title feature-title visually-hidden">Преимущества студии</h2>
+          <ul class="feature list grid">
+            <li class="feature__item grid-item">
               <div class="feature__item-group">
                 <svg
                   class="feature__item-icon"
@@ -277,7 +277,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="feature__item">
+            <li class="feature__item grid-item">
               <div class="feature__item-group">
                 <svg
                   class="feature__item-icon"
@@ -294,7 +294,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="feature__item">
+            <li class="feature__item grid-item">
               <div class="feature__item-group">
                 <svg
                   class="feature__item-icon"
@@ -311,7 +311,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="feature__item">
+            <li class="feature__item grid-item">
               <div class="feature__item-group">
                 <svg
                   class="feature__item-icon"
@@ -335,8 +335,8 @@
       <section class="section-work">
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
-          <ul class="work">
-            <li class="work__item">
+          <ul class="work list grid">
+            <li class="work__item grid-item">
               <div class="work__thumb">
                 <img
                   class="work__image"
@@ -350,7 +350,7 @@
                 <p class="work__text">десктопные приложения</p>
               </div>
             </li>
-            <li class="work__item">
+            <li class="work__item grid-item">
               <div class="work__thumb">
                 <img
                   class="work__image"
@@ -364,7 +364,7 @@
                 <p class="work__text">мобильные приложения</p>
               </div>
             </li>
-            <li class="work__item">
+            <li class="work__item grid-item">
               <div class="work__thumb">
                 <img
                   class="work__image"
@@ -382,11 +382,11 @@
         </div>
       </section>
       <!--section team-->
-      <section class="setion-team">
+      <section class="section setion-team">
         <div class="container">
           <h2 class="title">Наша команда</h2>
-          <ul class="team-list">
-            <li class="team-card">
+          <ul class="team-list list grid">
+            <li class="team-card grid-item">
               <img
                 class="team-card__image"
                 srcset="
@@ -399,7 +399,7 @@
               <div class="team-card__meta">
                 <h3 class="team-card__title">Игорь Демьяненко</h3>
                 <p class="team-card__text">Product Designer</p>
-                <ul class="social-list">
+                <ul class="social-list list">
                   <li class="social-list__item">
                     <a
                       class="social-list__link"
@@ -470,7 +470,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-card">
+            <li class="team-card grid-item">
               <img
                 class="team-card__image"
                 srcset="
@@ -483,7 +483,7 @@
               <div class="team-card__meta">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__text">Frontend Developer</p>
-                <ul class="social-list">
+                <ul class="social-list list">
                   <li class="social-list__item">
                     <a
                       class="social-list__link"
@@ -554,7 +554,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-card">
+            <li class="team-card grid-item">
               <img
                 class="team-card__image"
                 srcset="
@@ -567,7 +567,7 @@
               <div class="team-card__meta">
                 <h3 class="team-card__title">Николай Тарасов</h3>
                 <p class="team-card__text">Marketing</p>
-                <ul class="social-list">
+                <ul class="social-list list">
                   <li class="social-list__item">
                     <a
                       class="social-list__link"
@@ -638,7 +638,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-card">
+            <li class="team-card grid-item">
               <img
                 class="team-card__image"
                 srcset="
@@ -651,7 +651,7 @@
               <div class="team-card__meta">
                 <h3 class="team-card__title">Михаил Ермаков</h3>
                 <p class="team-card__text">UI Designer</p>
-                <ul class="social-list">
+                <ul class="social-list list">
                   <li class="social-list__item">
                     <a
                       class="social-list__link"
@@ -729,8 +729,8 @@
       <section class="section">
         <div class="container">
           <h2 class="title">Наши клиенты</h2>
-          <ul class="client-list">
-            <li class="client">
+          <ul class="client-list list grid">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -742,7 +742,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -754,7 +754,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -766,7 +766,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -778,7 +778,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -790,7 +790,7 @@
                 </svg>
               </a>
             </li>
-            <li class="client">
+            <li class="client grid-item">
               <a class="client__link" href="">
                 <svg
                   class="client__icon"
@@ -820,7 +820,7 @@
 
           <address class="address">
             <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list">
+            <ul class="address__list list">
               <li class="address__item">
                 <a class="address__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
@@ -917,13 +917,13 @@
               placeholder="E-mail"
             />
           </label>
-          <button class="footer-form__btn" type="submit">
+          <button class="footer-form__btn btn" type="submit">
             Подписаться
           </button>
         </div>
       </div>
     </footer>
-    <script src="./java/modal.js"></script>
-    <script src="./java/menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -4,21 +4,17 @@
     padding: 118px 0 118px 0;
     text-align: center;
 
-    @media screen and (min-width: 1200px)  {
+    @include mq(desktop)  {
     padding: 200px 0px 200px 0px;
 
     }
 
-}
-.container {
-    @extend %container;
 }
 
 .hero--overlay {  
     margin-left: auto;
     margin-right: auto;
     max-width: 1600px;
-
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +34,7 @@
                 rgba(47, 48, 58, 0.4)),url("../images/hero/mobile-header-img@2x.jpg");}
     }  
     
-    @media screen and (min-width: 481px) and (max-width:768px) {
+    @include mq(mobile-only) {
             background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)), url("../images/hero/tablet-header-img.jpg");
@@ -52,8 +48,8 @@
                 rgba(47, 48, 58, 0.4)),url("../images/hero/tablet-header-img@2x.jpg");}
     }
 
-     @media screen and (min-width: 769px) and (max-width:1600px) {
-             background-image: linear-gradient(to right,
+    @include mq(tablet-only) {
+            background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)), url("../images/hero/desktop-header-img.jpg");
 
@@ -80,20 +76,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
     font-size: 44px;
     line-height: 1.36;
     }
-}
-
-.btn {
-    @extend %btn;
-}
-
-.btn:hover,
-.btn:focus {
-    @extend %btn:hover;
-    @extend %btn:focus;
 }
 
 /* Modalka */
@@ -130,7 +116,7 @@
 
     transition: transform var(--transition-duration) var(--transition-timing-function);
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -140,7 +126,7 @@
     }
 
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         max-width: 530px;
         width: 100%;
     }
@@ -179,11 +165,9 @@
     margin-top: 0;
     margin-bottom: 12px;
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.1;
+    @include fonts(700, 20px, 22px, 0.03em);
+
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
     }
 
@@ -197,10 +181,9 @@
 
     &__label {
         text-align: left;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
+
+        @include fonts (400, 12px, 14px, 0.01em);
+        
         color: var(--primary-text-color);
         margin-bottom: 4px;
     }
@@ -246,10 +229,7 @@
     }
 
     &__comment::placeholder {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
+        @include fonts(400, 12px, 14px, 0.01em);
         color: rgba(117, 117, 117, 0.5);
     }
 
@@ -303,13 +283,11 @@
     }
 
     &__label {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 24px;
-        letter-spacing: 0.03em;
+        @include fonts(400, 12px, 24px, 0.03em);
+        
         color: var(--primary-text-color);
 
-        @media screen and (min-width: 1200px)  {
+        @include mq(desktop)  {
             font-size: 14px;
         } 
     }
@@ -319,13 +297,5 @@
     }
 }
 
-.modal-form-btn {
-    @extend %btn;
-}
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-    @extend %btn:hover;
-    @extend %btn:focus;
-}
 /*#endregion*/

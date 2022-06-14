@@ -1,40 +1,36 @@
 /*#region FOOTER*/
 .page-footer {
-
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--secondary-background-color);
     width: 100%; 
 }
 
-.container {
-    @extend %container;
-    text-align: center;
-}
-
 .page-footer__container {
-    @media screen and (min-width: 768px) {
+    text-align: center;
+
+    @include mq(tablet) {
         @include centeredFlex(flex);
         align-items: baseline;
         flex-wrap: wrap;
     }
   
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include mq(tablet-only) {
         justify-content: space-around;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         flex-wrap: nowrap;
         text-align: start;
    }
 }
 
 .contact {
-    @media screen and (max-width: 767px) {
+    @include mq(mobile-only) {
         margin-bottom: 60px; 
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include mq(desktop-only) {
         justify-content: space-around;
         margin-bottom: 60px; 
     }
@@ -42,20 +38,18 @@
 
 .logo-footer {
     font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @include fonts(700, 26px, 28px, 0.03em);
+    
     text-decoration: none;
 
     display: block;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         margin-right: 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         margin-right: 0;
         text-align: left;
     }
@@ -80,15 +74,12 @@
         color: var(--primary-background-color);
         font-style: normal;
 
-        @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
             margin-right: 70px;
             margin-bottom: 20px;
         }
     }
-    &__list {
-        @extend %list;
-    }
-    
+     
     &__item:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -112,7 +103,7 @@
 /* Footer social-links */
 
 .social-links {
-    @media screen and (max-width: 767px) {
+    @include mq(mobile-only) {
         margin-bottom: 60px; 
     }
 
@@ -120,16 +111,13 @@
 
     
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         margin-right: 93px;  
     }
 
     &__text {
         margin-bottom: 20px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
+        @include fonts (700, 14px, 16px, 0.03em);
         text-transform: uppercase;
         color: var(--primary-background-color);
     }
@@ -148,14 +136,11 @@
     &__text {
     
         margin-bottom: 20px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
+        @include fonts(700, 14px, 16px, 0.03em);
         text-transform: uppercase;
         color: var(--primary-background-color);
 
-        @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
             margin-bottom: 20px;
         }
     }
@@ -167,11 +152,8 @@
 
     &__input::placeholder {
         margin-left: 15px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-    
+        @include fonts(400, 16px, 20px, 0.03em);
+        
         color: var(--footer-text-color);
     }
 
@@ -188,11 +170,11 @@
         margin-bottom: 20px;
         transition: border var(--transition-duration) var(--transition-timing-function);
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             width: 100%;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
            width: 358px;
            margin-right: 12px;
         }
@@ -208,15 +190,10 @@
     &__btn {
         
         @include centeredFlex(inline-flex);
-        @extend %btn;
         display: inline-block;
         
-        @media screen and (min-width: 1200px) {
+        @include mq(desktop) {
             position: relative;}
-    }
-    &__btn:hover,
-    &__btn:focus {
-        background-color: #0B5E9E;
     }
 
     &__btn::after {

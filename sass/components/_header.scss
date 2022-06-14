@@ -5,26 +5,18 @@
     border-bottom: 1px solid var(--portfolio-border-cl);
 }
 
-.container {
-    @extend %container;
-}
-
 .page-header__container {
     @include centeredFlex (flex);
   }
 
 .logo {
     font-family: var(--secondary-font);
-    font-weight: 700;
-  
-    letter-spacing: 0.03em;
+    @include fonts(700, 24px, 30.42px, 0.03em);
     text-decoration: none;
-    font-size: 24px;
-    line-height: 1.17;
     padding-top: 26px;
     padding-bottom: 26px;
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
        font-size: 26px;
        line-height: 1.19;
        }  
@@ -42,15 +34,15 @@
 
 .page-header__logo {
 
-    @media screen and (min-width: 480px)  {
+    @include mq(mobile)  {
         margin-right: 276px;
     }  
 
-    @media screen and (min-width: 768px)  {
+    @include mq(tablet) {
         margin-right: 88px;
     }   
     
-    @media screen and (min-width: 1200px)  {
+    @include mq(desktop)  {
         margin-right: 93px;
     } 
 }
@@ -64,7 +56,7 @@
     border: 0;
     background-color: transparent; 
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: none;} 
     }
 
@@ -97,13 +89,13 @@
     text-align: left;
     font-size: 20px;
     &.is-open {
-        @media screen and (max-width: 767px) {
+        @include mq(mobile-only) {
             display: block;
             height: 100vh;
         }
     } 
       
-    @media screen and (max-width: 767px) {
+    @include mq(mobile-only) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -114,15 +106,12 @@
         background-color: #fff;
 
         color: #212121;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.17;
+        @include fonts(500, 40px, 46.8px, 0.02em);     
         text-align: left;
-        letter-spacing: 0.02em;
         font-style: normal;
     }
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: flex;
         flex-grow: 1;
     }    
@@ -130,9 +119,8 @@
 
 
 .navigation {
-    @extend %list;
     
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -140,14 +128,14 @@
 
     &__item:not(:last-child) {
         margin-right: 50px;
-        @media screen and (max-width: 767px) {
+        @include mq(mobile-only) {
             margin-bottom: 32px;
         }
     }
     
     &__item {
     position: relative;
-    @media screen and (max-width: 767px) { 
+    @include mq(mobile-only) { 
         margin-bottom: 200px;
     }
 
@@ -157,19 +145,13 @@
     
      color: var(--title-text-color);
      text-decoration: none;
-     letter-spacing: 0.02em;
-     font-weight: 500;
-     font-size: 14px;
-     line-height: 1.14;
+     @include fonts(500, 14px, 16px, 0.02em);
      padding: 32px 0 32px 0;
 
      transition: color var(--transition-duration) var(--transition-timing-function);
 
-     @media screen and (max-width: 767px) {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
+     @include mq(mobile-only) {
+        @include fonts(500, 40px, 47px, 0.02em);
         color: #212121;}
     }
     
@@ -183,7 +165,7 @@
         position: relative;}
 
     &__link--current::after {
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
 
         content: '';
         position: absolute;
@@ -201,28 +183,23 @@
 
 /* contact links */
 .contacts {
-    @extend %list;
     display: flex;
     transition: 
         color var(--transition-duration) var(--transition-timing-function),
         fill var(--transition-duration) var(--transition-timing-function);  
 
-    @media screen and (min-width: 768px) {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        color: var(--primary-text-color);
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        margin-left: auto;
+        @include mq(tablet) {
+            @include fonts(500, 12px, 14px, 0.02em);
+            color: var(--primary-text-color);
+            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: auto;
     }
 
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
         @include centeredFlex (flex);
         flex-direction: row;
         align-items: center;
@@ -230,9 +207,9 @@
 
     &__item:not(:last-child) {
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @include mq(tablet-only) {
      margin-bottom: 10px; }
-        @media screen and (min-width: 1200px) {
+     @include mq(desktop) {
             margin-right: 30px;
         }
     }
@@ -258,7 +235,7 @@
         margin-right: 10px;
     }
 
-    @media screen and (max-width: 767px) {
+    @include mq(mobile-only) {
         flex-direction: column;
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -293,7 +270,7 @@
 }
 
 .menu-social {
-    @media screen and (max-width: 767px) {
+    @include mq(mobile-only) {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -311,9 +288,8 @@
             color: var(--accent-color);
         }
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: none;}
-
 }
 
  /*#endregion*/
