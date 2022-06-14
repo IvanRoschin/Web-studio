@@ -19,14 +19,25 @@
        margin-right: auto;
       
        @include mq(tablet) {
-       --items: 2;
-
+        --items: 2;
       }  
       @include mq(desktop) {
        --items: 4;
-         }  
+         }
 
-     &__meta {
+    &__image {
+        @include mq(tablet) {
+            width: 354px;
+            height: 374px;
+          } 
+
+          @include mq(desktop) {
+            width: 270px;
+            height: 260px;
+          } 
+    }
+
+    &__meta {
         padding: 30px 0px 30px 0px;
     }
 

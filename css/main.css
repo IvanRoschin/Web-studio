@@ -517,6 +517,12 @@ img {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .contacts__item::after {
+    content: " ";
+    top: 0;
+    left: 0;
+    background-color: #212121;
+  }
   .contacts__item:nth-child(1) {
     font-size: 28px;
     margin-bottom: 64px;
@@ -977,8 +983,10 @@ img {
   }
 }
 
-.work__item {
-  --item: 3;
+@media screen and (min-width: 1200px) {
+  .work__item {
+    --items: 3;
+  }
 }
 
 .work__item:nth-child(3n) {
@@ -1002,7 +1010,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--primary-background-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -1039,6 +1046,20 @@ img {
 @media screen and (min-width: 1200px) {
   .team-card {
     --items: 4;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-card__image {
+    width: 354px;
+    height: 374px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-card__image {
+    width: 270px;
+    height: 260px;
   }
 }
 

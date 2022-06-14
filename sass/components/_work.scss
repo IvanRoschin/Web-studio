@@ -3,15 +3,18 @@
     display: none;
 
     @include mq(desktop) {
-        display: contents;        
+        display: contents;
         padding-top: 0px;
         padding-bottom: 94px;
-    }  
+    }
 }
 
-.work {
+.work { 
+
     &__item {
-        --item: 3;
+        @include mq(desktop) {
+            --items: 3;
+              }   
     }
 
     &__item:nth-child(3n) {
@@ -32,12 +35,12 @@
         padding-bottom: 27px;
         width: 100%;
 
-        @include fonts(700, 14px, 16px, 0.03em);
+        @include fonts (700, 14px, 16px, 0.03em);
     
-        text-align: center;
         text-transform: uppercase;
         color: var(--primary-background-color);
         background-color: rgba(47, 48, 58, 0.8);
     }
 }
+
 /*#endregion*/
