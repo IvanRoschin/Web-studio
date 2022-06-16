@@ -42,7 +42,7 @@
 
         <div class="menu-container" id="menu-container" data-menu>
 
-          <ul class="navigation" >
+          <ul class="navigation list">
             <li class="navigation__item">
               <a
                 class="navigation__link"
@@ -58,7 +58,7 @@
             </li>
           </ul>
         
-        <ul class="contacts">
+        <ul class="contacts list">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com"
               ><svg
@@ -95,7 +95,7 @@
             >Instagram 
             </a>
           </li>
-          <li class="menu-social__item">
+           <li class="menu-social__item">
             <a
               class="menu-social__link"
               href="./index.html"
@@ -103,7 +103,7 @@
               rel="noopener noreferrer"
             >Twitter
             </a>
-          </li>
+          </li> 
           <li class="menu-social__item">
             <a
               class="menu-social__link"
@@ -125,8 +125,6 @@
         </ul>
 
       </div>
-
-
       </div>
     </header>
     <!-- main -->
@@ -160,15 +158,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/01-img.jpg 1x, 
-                    ./images/portfolio/01-img@2x.jpg 2x"
-                    src="./images/portfolio/01-img.jpg"
+                    ../images/portfolio/img-1_lg.jpg 1x, 
+                    ../images/portfolio/img-1_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-1_md.jpg 1x,
+                    ../images/portfolio/img-1_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-1_sm.jpg  1x,
+                    ../images/portfolio/img-1_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-1_sm.jpg"
                     alt="Технокряк"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -187,15 +214,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/02-img.jpg 1x, 
-                    ./images/portfolio/02-img@2x.jpg 2x"
-                    src="./images/portfolio/02-img.jpg"
+                    ../images/portfolio/img-2_lg.jpg 1x, 
+                    ../images/portfolio/img-2_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-2_md.jpg 1x,
+                    ../images/portfolio/img-2_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-2_sm.jpg  1x,
+                    ../images/portfolio/img-2_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-2_sm.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -216,15 +272,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href=""
                 ><div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/03-img.jpg 1x, 
-                    ./images/portfolio/03-img@2x.jpg 2x"
-                    src="./images/portfolio/03-img.jpg"
+                    ../images/portfolio/img-3_lg.jpg 1x, 
+                    ../images/portfolio/img-3_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-3_md.jpg 1x,
+                    ../images/portfolio/img-3_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-3_sm.jpg  1x,
+                    ../images/portfolio/img-3_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-3_sm.jpg"
                     alt="Приложение Ресторан Seafood"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -243,15 +328,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href=""
                 ><div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/04-img.jpg 1x, 
-                    ./images/portfolio/04-img@2x.jpg 2x"
-                    src="./images/portfolio/04-img.jpg"
+                    ../images/portfolio/img-4_lg.jpg 1x, 
+                    ../images/portfolio/img-4_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-4_md.jpg 1x,
+                    ../images/portfolio/img-4_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-4_sm.jpg  1x,
+                    ../images/portfolio/img-4_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-4_sm.jpg"
                     alt="Проект Prime"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -270,15 +384,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/05-img.jpg 1x, 
-                    ./images/portfolio/05-img@2x.jpg 2x"
-                    src="./images/portfolio/05-img.jpg"
+                    ../images/portfolio/img-5_lg.jpg 1x, 
+                    ../images/portfolio/img-5_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-5_md.jpg 1x,
+                    ../images/portfolio/img-5_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-5_sm.jpg  1x,
+                    ../images/portfolio/img-5_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-5_sm.jpg"
                     alt="Проект Boxes"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -297,15 +440,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/06-img.jpg 1x, 
-                    ./images/portfolio/06-img@2x.jpg 2x"
-                    src="./images/portfolio/06-img.jpg"
+                    ../images/portfolio/img-6_lg.jpg 1x, 
+                    ../images/portfolio/img-6_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-6_md.jpg 1x,
+                    ../images/portfolio/img-6_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-6_sm.jpg  1x,
+                    ../images/portfolio/img-6_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-6_sm.jpg"
                     alt="Inspiration has no Borders"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -326,15 +498,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/07-img.jpg 1x, 
-                    ./images/portfolio/07-img@2x.jpg 2x"
-                    src="./images/portfolio/07-img.jpg"
+                    ../images/portfolio/img-7_lg.jpg 1x, 
+                    ../images/portfolio/img-7_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-7_md.jpg 1x,
+                    ../images/portfolio/img-7_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-7_sm.jpg  1x,
+                    ../images/portfolio/img-7_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-7_sm.jpg"
                     alt="Издание Limited Edition"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -355,15 +556,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/08-img.jpg 1x, 
-                    ./images/portfolio/08-img@2x.jpg 2x"
-                    src="./images/portfolio/08-img.jpg"
+                    ../images/portfolio/img-8_lg.jpg 1x, 
+                    ../images/portfolio/img-8_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-8_md.jpg 1x,
+                    ../images/portfolio/img-8_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-8_sm.jpg  1x,
+                    ../images/portfolio/img-8_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-8_sm.jpg"
                     alt="Проект LAB"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -382,15 +612,44 @@
             <li class="portfolio__item grid-item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
+                  <picture>
+                    <!-- Desktop -->
+                    <source
+                    media="(min-width:1200px)" 
                     srcset="
-                    ./images/portfolio/09-img.jpg 1x, 
-                    ./images/portfolio/09-img@2x.jpg 2x"
-                    src="./images/portfolio/09-img.jpg"
+                    ../images/portfolio/img-9_lg.jpg 1x, 
+                    ../images/portfolio/img-9_lg@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Tablet -->
+                    <source
+                    media="(min-width:768px)"
+                    srcset="
+                    ../images/portfolio/img-9_md.jpg 1x,
+                    ../images/portfolio/img-9_md@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                    />
+                    <!-- Mobile -->
+                    <source 
+                    media="(max-width:767px)"
+                    srcset="
+                    ../images/portfolio/img-9_sm.jpg  1x,
+                    ../images/portfolio/img-9_sm@2x.jpg 2x
+                    " 
+                    type="image/jpg"
+                    />
+                    <!-- Default -->
+                    <img
+                    class="portfolio__image"
+                    src="../images/portfolio/img-9_sm.jpg"
                     alt="Growing Business"
-                    width="370"
+                    width="450"
+                    height="294"
+                    loading="lazy"
                   />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -424,7 +683,7 @@
 
           <address class="address">
             <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list">
+            <ul class="address__list list">
               <li class="address__item">
                 <a class="address__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
@@ -440,7 +699,7 @@
         </div>
         <div class="social-links">
           <p class="social-links__text">присоединяйтесь</p>
-          <ul class="social-list">
+          <ul class="social-list list">
             <li class="social-list__item">
               <a
                 class="social-list__link page-footer__social-list"
@@ -521,7 +780,7 @@
               placeholder="E-mail"
             />
           </label>
-          <button class="footer-form__btn" type="submit">
+          <button class="footer-form__btn btn" type="submit">
             Подписаться
           </button>
         </div>

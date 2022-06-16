@@ -36,6 +36,7 @@
         width: 100%;
 
         @include fonts (700, 14px, 16px, 0.03em);
+        text-align: center;
     
         text-transform: uppercase;
         color: var(--primary-background-color);
