@@ -110,11 +110,17 @@
 
 .modal {
     position: relative;
-    width: 100%;
+    width: 90%;
+
     padding: 40px;
     background-color: var(--primary-background-color);
 
     transition: transform var(--transition-duration) var(--transition-timing-function);
+
+    // @include mq(mobile) { 
+    //     max-width: 450px;
+    //     width: 100%;
+    // }
 
     @include mq(tablet) {
         position: absolute;
